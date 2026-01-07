@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales for SAAS Maker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <header>
+        <div class="logo">
+            <div class="logo-icon">⚖️</div>
+            <span>Mentions Légales for SAAS Maker</span>
+        </div>
+        <div class="nav-badge">✨ 100% Gratuit</div>
+    </header>
+
+    <section class="hero">
+        <div class="badge">
+            <span class="badge-dot"></span>
+            Conforme RGPD 2026
+        </div>
+        <h1>Mentions Légales <span>for SAAS Maker</span></h1>
+        <p class="hero-description">
+            Générez des mentions légales professionnelles et conformes pour votre site web en quelques secondes. 
+            Remplissez le formulaire, cliquez sur générer, et c'est prêt !
+        </p>
+        <div class="features-mini">
+            <div class="feature-mini">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Conforme aux lois françaises
+            </div>
+            <div class="feature-mini">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Prêt en 30 secondes
+            </div>
+            <div class="feature-mini">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Copier-coller facile
+            </div>
+        </div>
+    </section>
+
+    <main class="main-container">
+        <div class="form-card">
+            <h2>📝 Vos informations</h2>
+            <p>Renseignez les informations de votre entreprise ou activité</p>
+            
+            <form id="legalForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Raison sociale *</label>
+                        <input type="text" id="companyName" placeholder="Ma Super Startup SAS" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Forme juridique</label>
+                        <select id="legalForm">
+                            <option value="SAS">SAS</option>
+                            <option value="SARL">SARL</option>
+                            <option value="EURL">EURL</option>
+                            <option value="SASU">SASU</option>
+                            <option value="Auto-entrepreneur">Auto-entrepreneur</option>
+                            <option value="Association">Association</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Adresse du siège social *</label>
+                    <input type="text" id="address" placeholder="123 Rue de l'Innovation, 75001 Paris" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>SIRET <span>(optionnel)</span></label>
+                        <input type="text" id="siret" placeholder="123 456 789 00012">
+                    </div>
+                    <div class="form-group">
+                        <label>Capital social <span>(optionnel)</span></label>
+                        <input type="text" id="capital" placeholder="10 000 €">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Numéro de téléphone *</label>
+                        <input type="tel" id="phone" placeholder="+33 1 23 45 67 89" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email de contact *</label>
+                        <input type="email" id="email" placeholder="contact@monsite.fr" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>URL du site web *</label>
+                    <input type="url" id="website" placeholder="https://www.monsite.fr" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Directeur de la publication *</label>
+                    <input type="text" id="director" placeholder="Jean Dupont" required>
+                </div>
+
+                <div style="margin: 2rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">🌐 Hébergement</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Informations sur l'hébergeur de votre site</p>
+                </div>
+
+                <div class="form-group">
+                    <label>Hébergeur du site *</label>
+                    <input type="text" id="host" placeholder="OVH, Vercel, AWS..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Adresse de l'hébergeur</label>
+                    <input type="text" id="hostAddress" placeholder="2 rue Kellermann, 59100 Roubaix">
+                </div>
+
+                <div class="form-group">
+                    <label>Téléphone de l'hébergeur</label>
+                    <input type="tel" id="hostPhone" placeholder="+33 9 72 10 10 07">
+                </div>
+
+                <div style="margin: 2rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">🏢 Obligations spécifiques</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Selon votre type d'activité (facultatif)</p>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Numéro RCS <span>(activité commerciale)</span></label>
+                        <input type="text" id="rcs" placeholder="Paris B 123 456 789">
+                    </div>
+                    <div class="form-group">
+                        <label>TVA Intracommunautaire <span>(si applicable)</span></label>
+                        <input type="text" id="tva" placeholder="FR 12 345678901">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Autorité d'autorisation <span>(activité réglementée)</span></label>
+                        <input type="text" id="authority" placeholder="Préfecture de Paris">
+                    </div>
+                    <div class="form-group">
+                        <label>Adresse de l'autorité</label>
+                        <input type="text" id="authorityAddress" placeholder="5 rue Leblanc, 75015 Paris">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-generate">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Générer mes mentions légales
+                </button>
+            </form>
+        </div>
+
+        <div class="output-card">
+            <div class="output-header">
+                <h2>📄 Résultat</h2>
+                <button class="btn-copy" id="copyBtn" style="display: none;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M5 15H4C2.895 15 2 14.105 2 13V4C2 2.895 2.895 2 4 2H13C14.105 2 15 2.895 15 4V5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    Copier
+                </button>
+            </div>
+            <div class="output-content empty" id="output">
+                <div>
+                    <p style="font-size: 3rem; margin-bottom: 1rem;">✨</p>
+                    <p>Vos mentions légales apparaîtront ici<br>après avoir cliqué sur "Générer"</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Fait avec ❤️ pour les makers — <a href="mentions-legales.html">Mentions Légales for SAAS Maker</a> © 2026</p>
+    </footer>
+
+    <div class="toast" id="toast">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Copié dans le presse-papier !
+    </div>
+
+    <script>
+        document.getElementById('legalForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupération des valeurs
+            const companyName = document.getElementById('companyName').value;
+            const legalStatus = document.querySelector('select').value;
+            const address = document.getElementById('address').value;
+            const siret = document.getElementById('siret').value;
+            const capital = document.getElementById('capital').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const website = document.getElementById('website').value;
+            const director = document.getElementById('director').value;
+            const host = document.getElementById('host').value;
+            const hostAddress = document.getElementById('hostAddress').value;
+            const hostPhone = document.getElementById('hostPhone').value;
+            const rcs = document.getElementById('rcs').value;
+            const tva = document.getElementById('tva').value;
+            const authority = document.getElementById('authority').value;
+            const authorityAddress = document.getElementById('authorityAddress').value;
+            
+            // Génération des mentions légales
+            const legalText = `
+<h3>1. Informations légales</h3>
+<p>Le site <strong>${website}</strong> est édité par :</p>
+<p>
+<strong>${companyName}</strong><br>
+Forme juridique : ${legalStatus}<br>
+Siège social : ${address}<br>
+${siret ? `SIRET : ${siret}<br>` : ''}
+${capital ? `Capital social : ${capital}<br>` : ''}
+Téléphone : ${phone}<br>
+Email : ${email}
+</p>
+
+<h3>2. Directeur de la publication</h3>
+<p>Le directeur de la publication du site est <strong>${director}</strong>.</p>
+
+<h3>3. Hébergement</h3>
+<p>Le site est hébergé par :<br>
+<strong>${host}</strong><br>
+${hostAddress ? `Adresse : ${hostAddress}<br>` : ''}
+${hostPhone ? `Téléphone : ${hostPhone}` : ''}
+</p>
+
+${(rcs || tva || authority) ? `
+<h3>4. Obligations spécifiques à l'activité</h3>
+${rcs ? `<p><strong>Activité commerciale :</strong><br>
+Numéro d'inscription au Registre du Commerce et des Sociétés (RCS) : ${rcs}</p>` : ''}
+${tva ? `<p><strong>TVA Intracommunautaire :</strong> ${tva}</p>` : ''}
+${authority ? `<p><strong>Activité soumise à autorisation :</strong><br>
+Autorisation délivrée par : ${authority}${authorityAddress ? `<br>Adresse : ${authorityAddress}` : ''}</p>` : ''}
+` : ''}
+
+<h3>${(rcs || tva || authority) ? '5' : '4'}. Propriété intellectuelle</h3>
+<p>L'ensemble du contenu de ce site (textes, images, vidéos, logos, icônes, sons, logiciels, etc.) est protégé par le droit d'auteur et le droit des marques. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de ${companyName}.</p>
+
+<h3>${(rcs || tva || authority) ? '6' : '5'}. Données personnelles et RGPD</h3>
+<p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.</p>
+<p>Pour exercer ces droits, vous pouvez nous contacter à l'adresse : <strong>${email}</strong></p>
+<p>Pour plus d'informations sur le traitement de vos données, veuillez consulter notre politique de confidentialité.</p>
+
+<h3>${(rcs || tva || authority) ? '7' : '6'}. Cookies</h3>
+<p>Le site peut être amené à utiliser des cookies pour améliorer l'expérience utilisateur et réaliser des statistiques de visites. Vous pouvez configurer votre navigateur pour refuser les cookies ou être alerté lors de leur utilisation.</p>
+
+<h3>${(rcs || tva || authority) ? '8' : '7'}. Limitation de responsabilité</h3>
+<p>${companyName} ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l'utilisateur, lors de l'accès au site, résultant soit de l'utilisation d'un matériel ne répondant pas aux spécifications techniques requises, soit de l'apparition d'un bug ou d'une incompatibilité.</p>
+
+<h3>${(rcs || tva || authority) ? '9' : '8'}. Droit applicable</h3>
+<p>Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+
+<p style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-muted);">
+<em>Dernière mise à jour : ${new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</em>
+</p>
+            `;
+            
+            // Affichage du résultat
+            const output = document.getElementById('output');
+            output.innerHTML = legalText;
+            output.classList.remove('empty');
+            
+            // Affichage du bouton copier
+            document.getElementById('copyBtn').style.display = 'flex';
+            
+            // Scroll vers le résultat sur mobile
+            if (window.innerWidth < 968) {
+                output.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+
+        // Copie du texte
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            const output = document.getElementById('output');
+            const textToCopy = output.innerText;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
