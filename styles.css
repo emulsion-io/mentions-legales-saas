@@ -251,13 +251,6 @@ label {
     color: var(--text);
 }
 
-label:has(input[type="checkbox"]) {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
 label span {
     color: var(--text-muted);
     font-weight: 400;
@@ -273,11 +266,6 @@ input, select, textarea {
     font-size: 1rem;
     font-family: inherit;
     transition: all 0.3s ease;
-}
-
-input[type="checkbox"] {
-    width: auto;
-    margin: 0;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -439,8 +427,7 @@ input::placeholder, textarea::placeholder {
 /* Content Card - Legal page */
 .content-card {
     padding: 3rem;
-    width: 100%;
-    max-width: none;
+    max-width: 900px;
     margin: 0 auto;
 }
 
