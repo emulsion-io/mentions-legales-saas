@@ -161,6 +161,31 @@
                     </div>
                 </div>
 
+                <div style="margin: 2rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">🍪 Cookies</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Informations sur l'utilisation des cookies sur votre site</p>
+                    <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 1rem; padding: 0.75rem; background: rgba(255, 255, 255, 0.05); border-radius: 6px; border-left: 3px solid var(--accent);">
+                        ⚠️ <strong>Important :</strong> Ce générateur ne gère pas la complexité de la déclaration des cookies pour une conformité totale. Si vous utilisez beaucoup de cookies et de trackers, il est recommandé de vous référer à un autre outil spécialisé.
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="cookiesTechnical"> Cookies techniques (nécessaires au fonctionnement du site)
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="cookiesTracking"> Cookies de suivi/analytics
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>Autres cookies à déclarer</label>
+                    <textarea id="cookiesOther" placeholder="Liste des autres cookies utilisés (ex: cookies publicitaires, cookies de réseaux sociaux...)" rows="3"></textarea>
+                </div>
+
                 <button type="submit" class="btn-generate">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -225,6 +250,11 @@
             const authority = document.getElementById('authority').value;
             const authorityAddress = document.getElementById('authorityAddress').value;
             
+            // Cookies
+            const cookiesTechnical = document.getElementById('cookiesTechnical').checked;
+            const cookiesTracking = document.getElementById('cookiesTracking').checked;
+            const cookiesOther = document.getElementById('cookiesOther').value.trim();
+            
             // Génération des mentions légales
             const legalText = `
 <h3>1. Informations légales</h3>
@@ -267,7 +297,13 @@ Autorisation délivrée par : ${authority}${authorityAddress ? `<br>Adresse : ${
 <p>Pour plus d'informations sur le traitement de vos données, veuillez consulter notre politique de confidentialité.</p>
 
 <h3>${(rcs || tva || authority) ? '7' : '6'}. Cookies</h3>
-<p>Le site peut être amené à utiliser des cookies pour améliorer l'expérience utilisateur et réaliser des statistiques de visites. Vous pouvez configurer votre navigateur pour refuser les cookies ou être alerté lors de leur utilisation.</p>
+<p>
+${!cookiesTechnical && !cookiesTracking && !cookiesOther ? 
+    'Le site n\'utilise pas de cookies.' : 
+    `Le site utilise les cookies suivants :${cookiesTechnical ? '<br>• Cookies techniques nécessaires au fonctionnement du site' : ''}${cookiesTracking ? '<br>• Cookies de suivi et d\'analytics pour mesurer l\'audience' : ''}${cookiesOther ? '<br>• ' + cookiesOther.replace(/\n/g, '<br>• ') : ''}`
+}
+</p>
+<p>Vous pouvez configurer votre navigateur pour refuser les cookies ou être alerté lors de leur utilisation. Pour plus d'informations, consultez notre politique de cookies.</p>
 
 <h3>${(rcs || tva || authority) ? '8' : '7'}. Limitation de responsabilité</h3>
 <p>${companyName} ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l'utilisateur, lors de l'accès au site, résultant soit de l'utilisation d'un matériel ne répondant pas aux spécifications techniques requises, soit de l'apparition d'un bug ou d'une incompatibilité.</p>
